@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === 'production') {
 mongoose.connect(
     dbURI,
     {
-      useMongoClient: false,
+      useMongoClient: true,
     });
 
 mongoose.connection.on('connected', () => {
