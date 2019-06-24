@@ -3,7 +3,12 @@ let dbURI = 'mongodb://localhost/loc8r';
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI;
 }
-mongoose.connect(dbURI);
+
+mongoose.connect(
+    dbURI,
+    {
+      useMongoClient: true,
+    });
 
 mongoose.connection.on('connected', () => {
   console.log(`Mongoose connected to ${dbURI}`);
