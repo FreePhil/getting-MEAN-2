@@ -8,7 +8,7 @@ mongoose.connect(
     dbURI,
     {
       useNewUrlParser: true,
-      useMongoClient: true,
+      // useMongoClient: true,
     });
 
 mongoose.connection.on('connected', () => {
