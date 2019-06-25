@@ -3,7 +3,6 @@ const apiOptions = {
   server : 'http://localhost:3000'
 };
 
-console.log("api_uri: " + process.env.API_URI);
 if (process.env.NODE_ENV === 'production') {
   apiOptions.server = process.env.API_URI;
 }
@@ -27,7 +26,7 @@ const homelist = function(req, res){
     requestOptions,
     (err, response, body) => {
       let data = body;
-      if (response.statusCode === 200 && data.length) {
+      if (!err && response.statusCode === 200 && data.length) {
         for (let i = 0; i < data.length; i++) {
           data[i].distance = _formatDistance(data[i].distance);
         }
