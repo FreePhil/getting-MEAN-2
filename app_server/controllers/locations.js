@@ -3,7 +3,7 @@ const apiOptions = {
   server : 'http://localhost:3000'
 };
 if (process.env.NODE_ENV === 'production') {
-  apiOptions.server = 'https://pure-temple-67771.herokuapp.com';
+  apiOptions.server = '   https://vast-caverns-69530.herokuapp.com';
 }
 
 // PUBLIC EXPOSED METHODS
@@ -97,7 +97,7 @@ const _getLocationInfo = function(req, res, callback) {
         data.coords = {
           lng : body.coords[0],
           lat : body.coords[1]
-        };                                
+        };
         callback(req, res, data);
       } else {
         _showError(req, res, response.statusCode);
@@ -175,7 +175,7 @@ const _showError = function (req, res, status) {
   let content = '';
   if (status === 404) {
     title = '404, page not found';
-    content = 'Oh dear. Looks like we can\'t find this page. Sorry.'; 
+    content = 'Oh dear. Looks like we can\'t find this page. Sorry.';
   } else {
     title = `${status}, something's gone wrong`;
     content = 'Something, somewhere, has gone just a little bit wrong.';
