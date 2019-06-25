@@ -2,10 +2,10 @@ const request = require('request');
 const apiOptions = {
   server : 'http://localhost:3000'
 };
+
+console.log("api_uri: " + process.env.API_URI);
 if (process.env.NODE_ENV === 'production') {
   apiOptions.server = process.env.API_URI;
-
-  console.log("api_uri: " + process.env.API_URI)
 }
 
 // PUBLIC EXPOSED METHODS
