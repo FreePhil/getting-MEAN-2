@@ -3,7 +3,7 @@ const apiOptions = {
   server : 'http://localhost:3000'
 };
 if (process.env.NODE_ENV === 'production') {
-  apiOptions.server = 'https://floating-waters-25917.herokuapp.com';
+  apiOptions.server = 'https://rocky-ravine-83163.herokuapp.com';
 }
 
 // PUBLIC EXPOSED METHODS
